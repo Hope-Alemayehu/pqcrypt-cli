@@ -73,18 +73,23 @@ encrypted_aes_key = kyber.encrypt(x_public_key, aes_key)
 
 ### Send the Package
 
-Combine everything into one file and send:
+### Combine everything into one file and send:
+
 [encrypted_aes_key] + [nonce] + [tag] + [encrypted_file]
+
 (Example: encrypted_data.pqc)
-Friend X Decrypts the File
-Split the received file into its parts.
-Decrypt the AES key with X’s private key (using Kyber):
+
+### Friend X Decrypts the File
+
+### Split the received file into its parts.
+
+### Decrypt the AES key with X’s private key (using Kyber):
 
 ```python
 aes_key = kyber.decrypt(x_private_key, encrypted_aes_key)
 ```
 
-Decrypt the file with AES-GCM:
+### Decrypt the file with AES-GCM:
 
 ```python
 cipher = AES.new(aes_key, AES.MODE_GCM, nonce=nonce)
