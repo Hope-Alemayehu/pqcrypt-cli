@@ -8,8 +8,8 @@ def Generate_keypair():
     public_key, private_key = generate_keypair()
     return public_key, private_key 
 
-a,b = Generate_keypair()
-print(a, b)
+# a,b = Generate_keypair()
+# print(a, b)
 
 def save_key(key, filename):
     #saves key to the file
