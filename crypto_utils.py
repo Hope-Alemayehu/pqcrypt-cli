@@ -7,7 +7,6 @@ import os
 def encrypt_file(file_path, public_key):
     #encrypts the file using hybrid  Kyber + AES approches 
     
-    #generate a rondom key
     aes_key = os.random(32)
     
     #we encrypt the AES key using the public key
